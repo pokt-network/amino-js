@@ -33,7 +33,72 @@ import (
 	tm_pex "github.com/cosmos/amino-js/go/lib/tendermint/tendermint/p2p/pex"
 	tm_privval "github.com/cosmos/amino-js/go/lib/tendermint/tendermint/privval"
 	tm_types "github.com/cosmos/amino-js/go/lib/tendermint/tendermint/types"
+
+	posmint_types "github.com/cosmos/amino-js/go/lib/pokt-network/posmint/types"
+	posmint_auth "github.com/cosmos/amino-js/go/lib/pokt-network/posmint/x/auth"
+
+	posmint_crypto "github.com/cosmos/amino-js/go/lib/pokt-network/posmint/crypto"
 )
+
+func DecodePosmintTx(bz []byte, lengthPrefixed bool) (bz2 []byte, err error) {
+	var o posmint_types.Tx
+	if lengthPrefixed {
+		err = codec.UnmarshalBinaryLengthPrefixed(bz, &o)
+	} else {
+		err = codec.UnmarshalBinaryBare(bz, &o)
+	}
+
+	if err != nil {
+		return nil, err
+	}
+
+	bz2, err = codec.MarshalJSON(o)
+	if err != nil {
+		return nil, err
+	}
+
+	return
+}
+
+func DecodePosmintStdTx(bz []byte, lengthPrefixed bool) (bz2 []byte, err error) {
+	var o posmint_auth.StdTx
+	if lengthPrefixed {
+		err = codec.UnmarshalBinaryLengthPrefixed(bz, &o)
+	} else {
+		err = codec.UnmarshalBinaryBare(bz, &o)
+	}
+
+	if err != nil {
+		return nil, err
+	}
+
+	bz2, err = codec.MarshalJSON(o)
+	if err != nil {
+		return nil, err
+	}
+
+	return
+}
+
+func DecodePosmintStdSignDoc(bz []byte, lengthPrefixed bool) (bz2 []byte, err error) {
+	var o posmint_auth.StdSignDoc
+	if lengthPrefixed {
+		err = codec.UnmarshalBinaryLengthPrefixed(bz, &o)
+	} else {
+		err = codec.UnmarshalBinaryBare(bz, &o)
+	}
+
+	if err != nil {
+		return nil, err
+	}
+
+	bz2, err = codec.MarshalJSON(o)
+	if err != nil {
+		return nil, err
+	}
+
+	return
+}
 
 func DecodeMultiStoreProofOp(bz []byte, lengthPrefixed bool) (bz2 []byte, err error) {
 	var o rootmulti.MultiStoreProofOp
@@ -1257,6 +1322,26 @@ func DecodePubKey(bz []byte, lengthPrefixed bool) (bz2 []byte, err error) {
 
 func DecodePrivKey(bz []byte, lengthPrefixed bool) (bz2 []byte, err error) {
 	var o tm_crypto.PrivKey
+	if lengthPrefixed {
+		err = codec.UnmarshalBinaryLengthPrefixed(bz, &o)
+	} else {
+		err = codec.UnmarshalBinaryBare(bz, &o)
+	}
+
+	if err != nil {
+		return nil, err
+	}
+
+	bz2, err = codec.MarshalJSON(o)
+	if err != nil {
+		return nil, err
+	}
+
+	return
+}
+
+func DecodePosmintEd25519PublicKey(bz []byte, lengthPrefixed bool) (bz2 []byte, err error) {
+	var o posmint_crypto.Ed25519PublicKey
 	if lengthPrefixed {
 		err = codec.UnmarshalBinaryLengthPrefixed(bz, &o)
 	} else {

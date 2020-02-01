@@ -1,6 +1,15 @@
 package lib
 
 const (
+	PocketCoreMsgStake                           = "pocket-core/MsgStake"
+	PocketCoreMsgBeginUnstake                    = "pocket-core/MsgBeginUnstake"
+	PocketCoreMsgAppStake                        = "pocket-core/MsgAppStake"
+	PocketCoreMsgBeginAppUnstake                 = "pocket-core/MsgBeginAppUnstake"
+	PosmintMsgSend                               = "posmint/MsgSend"
+	PosmintStdSignDoc                            = "posmint/StdSignDoc"
+	PosmintStdTx                                 = "posmint/StdTx"
+	PosmintAddress                               = "posmint/Address"
+	PosmintEd25519PublicKey                      = "crypto/ed25519_public_key"
 	TendermintPrivKeyLedgerSecp256k1             = "tendermint/PrivKeyLedgerSecp256k1"
 	CryptoKeysHdBIP44Params                      = "crypto/keys/hd/BIP44Params"
 	CryptoKeysLocalInfo                          = "crypto/keys/localInfo"

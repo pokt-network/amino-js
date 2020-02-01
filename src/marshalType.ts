@@ -105,6 +105,7 @@ import {
     VoteSetMaj23Message,
     WALMessage
 } from './types';
+import { PosmintTx, PosmintStdTx, PosmintStdSignDoc, PosmintEd25519PublicKey } from './types/pocket';
 
 /**
  * Marshal a `MultiStoreProofOp` object to Amino
@@ -272,6 +273,48 @@ export function marshalMsg (o: Msg, lengthPrefixed: boolean = true): AminoBytes 
 export function marshalTx (o: Tx, lengthPrefixed: boolean = true): AminoBytes {
     const json = jsonToBytes(o);
     return encodeType.encodeTx(json, lengthPrefixed);
+}
+
+/**
+ * Marshal a `Posmint` object to Amino
+ *
+ * @param   o              - `PosmintTx` object
+ * @param   lengthPrefixed - if `true`, use length-prefixed Amino encoding; if `false`, use bare Amino encoding
+ *
+ * @returns Amino-encoded `PosmintTx` object
+ * @throws  will throw if encoding fails
+ */
+export function marshalPosmintTx(o: PosmintTx, lengthPrefixed: boolean = true): AminoBytes {
+    const json = jsonToBytes(o);
+    return encodeType.encodePosmintTx(json, lengthPrefixed);
+}
+
+/**
+ * Marshal a `PosmintStdTx` object to Amino
+ *
+ * @param   o              - `PosmintStdTx` object
+ * @param   lengthPrefixed - if `true`, use length-prefixed Amino encoding; if `false`, use bare Amino encoding
+ *
+ * @returns Amino-encoded `PosmintStdTx` object
+ * @throws  will throw if encoding fails
+ */
+export function marshalPosmintStdTx(o: PosmintStdTx, lengthPrefixed: boolean = true): AminoBytes {
+    const json = jsonToBytes(o);
+    return encodeType.encodePosmintStdTx(json, lengthPrefixed);
+}
+
+/**
+ * Marshal a `PosmintStdSignDoc` object to Amino
+ *
+ * @param   o              - `PosmintStdSignDoc` object
+ * @param   lengthPrefixed - if `true`, use length-prefixed Amino encoding; if `false`, use bare Amino encoding
+ *
+ * @returns Amino-encoded `PosmintStdSignDoc` object
+ * @throws  will throw if encoding fails
+ */
+export function marshalPosmintStdSignDoc(o: PosmintStdSignDoc, lengthPrefixed: boolean = true): AminoBytes {
+    const json = jsonToBytes(o);
+    return encodeType.encodePosmintStdSignDoc(json, lengthPrefixed);
 }
 
 /**
@@ -986,6 +1029,20 @@ export function marshalPrivKey (o: PrivKey, lengthPrefixed: boolean = true): Ami
 export function marshalPubKeyEd25519 (o: PubKeyEd25519, lengthPrefixed: boolean = true): AminoBytes {
     const json = jsonToBytes(o);
     return encodeType.encodePubKeyEd25519(json, lengthPrefixed);
+}
+
+/**
+ * Marshal a `PosmintEd25519PublicKey` object to Amino
+ *
+ * @param   o              - `PosmintEd25519PublicKey` object
+ * @param   lengthPrefixed - if `true`, use length-prefixed Amino encoding; if `false`, use bare Amino encoding
+ *
+ * @returns Amino-encoded `PosmintEd25519PublicKey` object
+ * @throws  will throw if encoding fails
+ */
+export function marshalPosmintEd25519PublicKey(o: PosmintEd25519PublicKey, lengthPrefixed: boolean = true): AminoBytes {
+    const json = jsonToBytes(o);
+    return encodeType.encodePosmintEd25519PublicKey(json, lengthPrefixed);
 }
 
 /**

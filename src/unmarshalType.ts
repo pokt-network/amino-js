@@ -105,6 +105,7 @@ import {
     VoteSetMaj23Message,
     WALMessage
 } from './types';
+import { PosmintTx, PosmintStdTx, PosmintStdSignDoc, PosmintEd25519PublicKey } from './types/pocket';
 
 /**
  * Unmarshal a `MultiStoreProofOp` object from Amino
@@ -273,6 +274,49 @@ export function unmarshalTx (amino: AminoBytes, lengthPrefixed: boolean = true):
     const json = decodeType.decodeTx(amino, lengthPrefixed);
     return bytesToJSON(json);
 }
+
+/**
+ * Unmarshal a `PosmintTx` object from Amino
+ *
+ * @param   amino          - Amino-encoded `PosmintTx` object
+ * @param   lengthPrefixed - if `true`, use length-prefixed Amino decoding; if `false`, use bare Amino decoding
+ *
+ * @returns `PosmintTx` object
+ * @throws  will throw if decoding fails
+ */
+export function unmarshalPosmintTx(amino: AminoBytes, lengthPrefixed: boolean = true): PosmintTx {
+    const json = decodeType.decodePosmintTx(amino, lengthPrefixed);
+    return bytesToJSON(json);
+}
+
+/**
+ * Unmarshal a `PosmintStdTx` object from Amino
+ *
+ * @param   amino          - Amino-encoded `PosmintStdTx` object
+ * @param   lengthPrefixed - if `true`, use length-prefixed Amino decoding; if `false`, use bare Amino decoding
+ *
+ * @returns `PosmintStdTx` object
+ * @throws  will throw if decoding fails
+ */
+export function unmarshalPosmintStdTx(amino: AminoBytes, lengthPrefixed: boolean = true): PosmintStdTx {
+    const json = decodeType.decodePosmintStdTx(amino, lengthPrefixed);
+    return bytesToJSON(json);
+}
+
+/**
+ * Unmarshal a `PosmintStdSignDoc` object from Amino
+ *
+ * @param   amino          - Amino-encoded `PosmintStdSignDoc` object
+ * @param   lengthPrefixed - if `true`, use length-prefixed Amino decoding; if `false`, use bare Amino decoding
+ *
+ * @returns `PosmintStdSignDoc` object
+ * @throws  will throw if decoding fails
+ */
+export function unmarshalPosmintStdSignDoc(amino: AminoBytes, lengthPrefixed: boolean = true): PosmintStdSignDoc {
+    const json = decodeType.decodePosmintStdSignDoc(amino, lengthPrefixed);
+    return bytesToJSON(json);
+}
+
 
 /**
  * Unmarshal a `Account` object from Amino
@@ -975,6 +1019,20 @@ export function unmarshalPrivKey (amino: AminoBytes, lengthPrefixed: boolean = t
 }
 
 /**
+ * Unmarshal a `PosmintEd25519PublicKey` object from Amino
+ *
+ * @param   amino          - Amino-encoded `PosmintEd25519PublicKey` object
+ * @param   lengthPrefixed - if `true`, use length-prefixed Amino decoding; if `false`, use bare Amino decoding
+ *
+ * @returns `PosmintEd25519PublicKey` object
+ * @throws  will throw if decoding fails
+ */
+export function unmarshalPosmintEd25519PublicKey (amino: AminoBytes, lengthPrefixed: boolean = true): PosmintEd25519PublicKey {
+    const json = decodeType.decodePosmintEd25519PublicKey(amino, lengthPrefixed);
+    return bytesToJSON(json);
+}
+
+/**
  * Unmarshal a `PubKeyEd25519` object from Amino
  *
  * @param   amino          - Amino-encoded `PubKeyEd25519` object
@@ -983,7 +1041,7 @@ export function unmarshalPrivKey (amino: AminoBytes, lengthPrefixed: boolean = t
  * @returns `PubKeyEd25519` object
  * @throws  will throw if decoding fails
  */
-export function unmarshalPubKeyEd25519 (amino: AminoBytes, lengthPrefixed: boolean = true): PubKeyEd25519 {
+export function unmarshalPubKeyEd25519(amino: AminoBytes, lengthPrefixed: boolean = true): PubKeyEd25519 {
     const json = decodeType.decodePubKeyEd25519(amino, lengthPrefixed);
     return bytesToJSON(json);
 }
