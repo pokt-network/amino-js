@@ -612,6 +612,39 @@ export function encodeContinuousVestingAccount (json: JSONBytes, lengthPrefixed:
 export function encodeDelayedVestingAccount (json: JSONBytes, lengthPrefixed: boolean): AminoBytes;
 
 /**
+ * Encode a `PosmintTx` object from JSON to Amino
+ *
+ * @param   json           - JSON-encoded `StdTx` object
+ * @param   lengthPrefixed - if `true`, use length-prefixed Amino encoding; if `false`, use bare Amino encoding
+ *
+ * @returns Amino-encoded `PosmintTx` object
+ * @throws  will throw if encoding fails
+ */
+export function encodePosmintTx(json: JSONBytes, lengthPrefixed: boolean): AminoBytes;
+
+/**
+ * Encode a `PosmintStdTx` object from JSON to Amino
+ *
+ * @param   json           - JSON-encoded `StdTx` object
+ * @param   lengthPrefixed - if `true`, use length-prefixed Amino encoding; if `false`, use bare Amino encoding
+ *
+ * @returns Amino-encoded `PosmintStdTx` object
+ * @throws  will throw if encoding fails
+ */
+export function encodePosmintStdTx(json: JSONBytes, lengthPrefixed: boolean): AminoBytes;
+
+/**
+ * Encode a `PosmintStdSignDoc` object from JSON to Amino
+ *
+ * @param   json           - JSON-encoded `StdTx` object
+ * @param   lengthPrefixed - if `true`, use length-prefixed Amino encoding; if `false`, use bare Amino encoding
+ *
+ * @returns Amino-encoded `PosmintStdSignDoc` object
+ * @throws  will throw if encoding fails
+ */
+export function encodePosmintStdSignDoc(json: JSONBytes, lengthPrefixed: boolean): AminoBytes;
+
+/**
  * Encode a `StdTx` object from JSON to Amino
  *
  * @param   json           - JSON-encoded `StdTx` object
@@ -1105,6 +1138,17 @@ export function encodePrivKey (json: JSONBytes, lengthPrefixed: boolean): AminoB
  * @throws  will throw if encoding fails
  */
 export function encodePubKeyEd25519 (json: JSONBytes, lengthPrefixed: boolean): AminoBytes;
+
+/**
+ * Encode a `PosmintEd25519PublicKey` object from JSON to Amino
+ *
+ * @param   json           - JSON-encoded `PosmintEd25519PublicKey` object
+ * @param   lengthPrefixed - if `true`, use length-prefixed Amino encoding; if `false`, use bare Amino encoding
+ *
+ * @returns Amino-encoded `PosmintEd25519PublicKey` object
+ * @throws  will throw if encoding fails
+ */
+export function encodePosmintEd25519PublicKey(json: JSONBytes, lengthPrefixed: boolean): AminoBytes;
 
 /**
  * Encode a `PrivKeyEd25519` object from JSON to Amino
@@ -1735,6 +1779,39 @@ export function decodeContinuousVestingAccount (amino: AminoBytes, lengthPrefixe
 export function decodeDelayedVestingAccount (amino: AminoBytes, lengthPrefixed: boolean): JSONBytes;
 
 /**
+ * Decode a `PosmintTx` object from JSON to Amino
+ *
+ * @param   amino           - Amino-encoded `PosmintTx` object
+ * @param   lengthPrefixed - if `true`, use length-prefixed Amino encoding; if `false`, use bare Amino encoding
+ *
+ * @returns JSON-encoded `PosmintTx` object
+ * @throws  will throw if encoding fails
+ */
+export function decodePosmintTx(amino: AminoBytes, lengthPrefixed: boolean): JSONBytes;
+
+/**
+ * Decode a `PosmintStdTx` object from JSON to Amino
+ *
+ * @param   amino           - Amino-encoded `PosmintStdSignDoc` object
+ * @param   lengthPrefixed - if `true`, use length-prefixed Amino encoding; if `false`, use bare Amino encoding
+ *
+ * @returns JSON-encoded `PosmintStdTx` object
+ * @throws  will throw if encoding fails
+ */
+export function decodePosmintStdTx(amino: AminoBytes, lengthPrefixed: boolean): JSONBytes;
+
+/**
+ * Decode a `PosmintStdSignDoc` object from Amino to JSON
+ *
+ * @param   amino           - Amino-encoded `PosmintStdSignDoc` object
+ * @param   lengthPrefixed -  if true, use length-prefixed Amino decoding; if false, use bare Amino decoding
+ *
+ * @returns JSON-encoded `PosmintStdSignDoc` object
+ * @throws  will throw if encoding fails
+ */
+export function decodePosmintStdSignDoc(amino: AminoBytes, lengthPrefixed: boolean): JSONBytes;
+
+/**
  * Decode a `StdTx` object from Amino to JSON
  *
  * @param   amino          - Amino-encoded `object ` object
@@ -2228,6 +2305,17 @@ export function decodePrivKey (amino: AminoBytes, lengthPrefixed: boolean): JSON
  * @throws  will throw if decoding fails
  */
 export function decodePubKeyEd25519 (amino: AminoBytes, lengthPrefixed: boolean): JSONBytes;
+
+/**
+ * Decode a `PosmintEd25519PublicKey` object from Amino to JSON
+ *
+ * @param   amino          - Amino-encoded `PosmintEd25519PublicKey` object
+ * @param   lengthPrefixed - if true, use length-prefixed Amino decoding; if false, use bare Amino decoding
+ *
+ * @returns JSON-encoded `PosmintEd25519PublicKey` object
+ * @throws  will throw if decoding fails
+ */
+export function decodePosmintEd25519PublicKey(amino: AminoBytes, lengthPrefixed: boolean): JSONBytes;
 
 /**
  * Decode a `PrivKeyEd25519` object from Amino to JSON

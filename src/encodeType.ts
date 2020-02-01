@@ -100,5 +100,9 @@ export {
     encodeDuplicateVoteEvidence,
     encodeMockGoodEvidence,
     encodeMockRandomGoodEvidence,
-    encodeMockBadEvidence
+    encodeMockBadEvidence,
+    encodePosmintStdSignDoc,
+    encodePosmintStdTx,
+    encodePosmintTx,
+    encodePosmintEd25519PublicKey
 } from '../lib/Amino';

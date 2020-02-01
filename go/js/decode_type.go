@@ -4,6 +4,30 @@ import (
 	"github.com/cosmos/amino-js/go/src"
 )
 
+func DecodePosmintTx(bz []byte, lengthPrefixed bool) (bz2 []byte) {
+	bz2, err := src.DecodePosmintTx(bz, lengthPrefixed)
+	if err != nil {
+		panic(err)
+	}
+	return
+}
+
+func DecodePosmintStdTx(bz []byte, lengthPrefixed bool) (bz2 []byte) {
+	bz2, err := src.DecodePosmintStdTx(bz, lengthPrefixed)
+	if err != nil {
+		panic(err)
+	}
+	return
+}
+
+func DecodePosmintStdSignDoc(bz []byte, lengthPrefixed bool) (bz2 []byte) {
+	bz2, err := src.DecodePosmintStdSignDoc(bz, lengthPrefixed)
+	if err != nil {
+		panic(err)
+	}
+	return
+}
+
 func DecodeMultiStoreProofOp(bz []byte, lengthPrefixed bool) (bz2 []byte) {
 	bz2, err := src.DecodeMultiStoreProofOp(bz, lengthPrefixed)
 	if err != nil {
@@ -502,6 +526,14 @@ func DecodePrivKey(bz []byte, lengthPrefixed bool) (bz2 []byte) {
 
 func DecodePubKeyEd25519(bz []byte, lengthPrefixed bool) (bz2 []byte) {
 	bz2, err := src.DecodePubKeyEd25519(bz, lengthPrefixed)
+	if err != nil {
+		panic(err)
+	}
+	return
+}
+
+func DecodePosmintEd25519PublicKey(bz []byte, lengthPrefixed bool) (bz2 []byte) {
+	bz2, err := src.DecodePosmintEd25519PublicKey(bz, lengthPrefixed)
 	if err != nil {
 		panic(err)
 	}

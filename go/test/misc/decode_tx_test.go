@@ -2,8 +2,9 @@ package misc
 
 import (
 	"encoding/base64"
-	"github.com/cosmos/amino-js/go/src"
 	"testing"
+
+	"github.com/cosmos/amino-js/go/src"
 )
 
 func TestDecodeTx(t *testing.T) {
@@ -25,4 +26,8 @@ func TestDecodeTx(t *testing.T) {
 	_ = json
 	_ = encodedDecoded
 	return
+}
+
+func TestDecodePosmintTx(t *testing.T) {
+	//src.EncodePosmintTx()
 }
