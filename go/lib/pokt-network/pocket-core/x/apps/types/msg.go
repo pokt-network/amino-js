@@ -21,3 +21,8 @@ type MsgAppStake struct {
 type MsgBeginAppUnstake struct {
 	Address sdk.Address `json:"application_address" yaml:"application_address"`
 }
+
+// MsgAppUnjail - struct for unjailing jailed application
+type MsgAppUnjail struct {
+	AppAddr sdk.Address `json:"address" yaml:"address"` // address of the application operator
+}

@@ -22,3 +22,8 @@ type MsgStake struct {
 type MsgBeginUnstake struct {
 	Address sdk.Address `json:"validator_address" yaml:"validator_address"`
 }
+
+// MsgUnjail - struct for unjailing jailed validator
+type MsgUnjail struct {
+	ValidatorAddr sdk.Address `json:"address" yaml:"address"` // address of the validator operator
+}
