@@ -1,10 +1,12 @@
 package lib
 
 const (
-	PocketCoreMsgStake                           = "pocket-core/MsgStake"
-	PocketCoreMsgBeginUnstake                    = "pocket-core/MsgBeginUnstake"
-	PocketCoreMsgAppStake                        = "pocket-core/MsgAppStake"
-	PocketCoreMsgBeginAppUnstake                 = "pocket-core/MsgBeginAppUnstake"
+	PocketCoreMsgStake                           = "pos/MsgStake"
+	PocketCoreMsgBeginUnstake                    = "pos/MsgBeginUnstake"
+	PocketCoreMsgUnjail                          = "pos/MsgUnjail"
+	PocketCoreMsgAppStake                        = "apps/MsgAppStake"
+	PocketCoreMsgBeginAppUnstake                 = "apps/MsgAppBeginUnstake"
+	PocketCoreMsgAppUnjail                       = "apps/MsgAppUnjail"
 	PosmintMsgSend                               = "posmint/MsgSend"
 	PosmintStdSignDoc                            = "posmint/StdSignDoc"
 	PosmintStdTx                                 = "posmint/StdTx"

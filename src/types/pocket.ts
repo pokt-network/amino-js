@@ -65,22 +65,30 @@ export interface PosmintMsgStake {
 
 }
 
-export interface MsgBeginUnstake {
+export interface PosmintMsgBeginUnstake {
 
 }
 
-export interface MsgAppStake {
+export interface PosmintMsgUnjail {
 
 }
 
-export interface MsgBeginAppUnstake {
+export interface PosmintMsgAppStake {
+
+}
+
+export interface PosmintMsgBeginAppUnstake {
+
+}
+
+export interface PosmintMsgAppUnjail {
 
 }
 
 /** @TODO document */
 export interface PosmintMsg {
     type: string;
-    value: PosmintMsgSend | PosmintMsgStake | MsgBeginUnstake | MsgAppStake | MsgBeginAppUnstake;
+    value: PosmintMsgSend | PosmintMsgStake | PosmintMsgBeginUnstake | PosmintMsgUnjail | PosmintMsgAppStake | PosmintMsgBeginAppUnstake | PosmintMsgAppUnjail;
 }
 
 /** @TODO document */

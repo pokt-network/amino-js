@@ -66,11 +66,13 @@ func RegisterCodec(codec *amino.Codec) {
 
 	codec.RegisterConcrete(pocket_core_apps.MsgAppStake{}, PocketCoreMsgAppStake, nil)
 	codec.RegisterConcrete(pocket_core_apps.MsgBeginAppUnstake{}, PocketCoreMsgBeginAppUnstake, nil)
+	codec.RegisterConcrete(pocket_core_apps.MsgAppUnjail{}, PocketCoreMsgAppUnjail, nil)
 
 	// pokt-network/pocket-core/x/nodes
 
 	codec.RegisterConcrete(pocket_core_nodes.MsgStake{}, PocketCoreMsgStake, nil)
 	codec.RegisterConcrete(pocket_core_nodes.MsgBeginUnstake{}, PocketCoreMsgBeginUnstake, nil)
+	codec.RegisterConcrete(pocket_core_nodes.MsgUnjail{}, PocketCoreMsgUnjail, nil)
 
 	// cosmos/cosmos-sdk/crypto/amino.go
 
