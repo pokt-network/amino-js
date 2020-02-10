@@ -7,7 +7,7 @@ const (
 	PocketCoreMsgAppStake                        = "apps/MsgAppStake"
 	PocketCoreMsgBeginAppUnstake                 = "apps/MsgAppBeginUnstake"
 	PocketCoreMsgAppUnjail                       = "apps/MsgAppUnjail"
-	PosmintMsgSend                               = "posmint/MsgSend"
+	PosmintMsgSend                               = "pos/Send"
 	PosmintStdSignDoc                            = "posmint/StdSignDoc"
 	PosmintStdTx                                 = "posmint/StdTx"
 	PosmintAddress                               = "posmint/Address"
