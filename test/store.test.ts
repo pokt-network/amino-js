@@ -58,8 +58,7 @@ const account = {
                     'type':  'tendermint/PubKeySecp256k1',
                     'value': 'Aph7TYP/rh43A4a9Xx+z7s2vg7fCf1JLoj1mA9yZDWMS'
                 },
-                'account_number': '155',
-                'sequence':       '59'
+                'entropy': Math.floor(Math.random() * 99999999999999999)
             },
             'original_vesting':  [{
                 'denom':  'uatom',

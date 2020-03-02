@@ -21,15 +21,14 @@ type StdFee struct {
 }
 
 type StdSignDoc struct {
-	AccountNumber uint64            `json:"account_number"`
-	ChainID       string            `json:"chain_id"`
-	Fee           json.RawMessage   `json:"fee"`
-	Memo          string            `json:"memo"`
-	Msgs          []json.RawMessage `json:"msgs"`
-	Sequence      uint64            `json:"sequence"`
+	ChainID string            `json:"chain_id"`
+	Fee     json.RawMessage   `json:"fee"`
+	Memo    string            `json:"memo"`
+	Msgs    []json.RawMessage `json:"msgs"`
+	Entropy int64             `json:"entropy"`
 }
 
 type StdSignature struct {
 	crypto.PubKey `json:"pub_key"` // optional
-	Signature     []byte `json:"signature"`
+	Signature     []byte           `json:"signature"`
 }
