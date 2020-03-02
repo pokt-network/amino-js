@@ -17,8 +17,7 @@ export interface BaseAccount extends AccountValue {
     address: string;
     coins: Coin[];
     public_key: PubKey;
-    account_number: string;
-    sequence: string;
+    entropy: BigInt;
 }
 
 /** @TODO document */
