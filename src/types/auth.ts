@@ -56,6 +56,7 @@ export interface StdTxValue extends TxValue {
     fee: StdFee;
     signatures: StdSignature[];
     memo: string;
+    entropy: number;
 }
 
 /** @TODO document */

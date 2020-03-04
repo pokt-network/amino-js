@@ -112,4 +112,5 @@ export interface PosmintStdTx extends PosmintTxValue {
     fee: PosmintCoin[];
     signatures: PosmintStdSignature[];
     memo: string;
+    entropy: number;
 }

@@ -14,6 +14,7 @@ type StdTx struct {
 	Fee        sdk.Coins      `json:"fee"`
 	Signatures []StdSignature `json:"signatures"`
 	Memo       string         `json:"memo"`
+	Entropy    int64          `json:"entropy"`
 }
 
 type StdSignDoc struct {
@@ -21,7 +22,7 @@ type StdSignDoc struct {
 	Fee           json.RawMessage   `json:"fee"`
 	Memo          string            `json:"memo"`
 	Msgs          []json.RawMessage `json:"msgs"`
-	Entropy            int64  `json:"entropy"`
+	Entropy       int64             `json:"entropy"`
 }
 
 type StdSignature struct {

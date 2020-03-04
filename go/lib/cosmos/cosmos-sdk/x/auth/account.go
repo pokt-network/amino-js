@@ -18,7 +18,6 @@ type BaseAccount struct {
 	Address       sdk.AccAddress `json:"address"`
 	Coins         sdk.Coins      `json:"coins"`
 	PubKey        crypto.PubKey  `json:"public_key"`
-	Entropy            int64  `json:"entropy"`
 }
 
 type BaseVestingAccount struct {

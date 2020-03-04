@@ -13,6 +13,7 @@ type StdTx struct {
 	Fee        StdFee         `json:"fee"`
 	Signatures []StdSignature `json:"signatures"`
 	Memo       string         `json:"memo"`
+	Entropy    int64          `json:"entropy"`
 }
 
 type StdFee struct {
