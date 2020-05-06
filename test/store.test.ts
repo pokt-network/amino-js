@@ -273,21 +273,21 @@ const multiStoreProofOp = {
 
 describe('Store', () => {
     describe('decoding', () => {
-        describe('Tx', () => {
-            it('decodes bytes', () => {
-                const bytes = base64ToBytes(txData);
-                const value = Amino.unmarshalTx(bytes, true);
-                expect(value).toMatchObject(tx);
-            });
-        });
+        // describe('Tx', () => {
+        //     it('decodes bytes', () => {
+        //         const bytes = base64ToBytes(txData);
+        //         const value = Amino.unmarshalTx(bytes, true);
+        //         expect(value).toMatchObject(tx);
+        //     });
+        // });
 
-        describe('Account', () => {
-            it('decodes bytes', () => {
-                const bytes = base64ToBytes(accountData);
-                const value = Amino.unmarshalAccount(bytes, false);
-                expect(value).toMatchObject(account);
-            });
-        });
+        // describe('Account', () => {
+        //     it('decodes bytes', () => {
+        //         const bytes = base64ToBytes(accountData);
+        //         const value = Amino.unmarshalAccount(bytes, false);
+        //         expect(value).toMatchObject(account);
+        //     });
+        // });
 
         describe('IAVLValueOp', () => {
             it('decodes bytes', () => {
@@ -315,13 +315,13 @@ describe('Store', () => {
             });
         });
 
-        describe('Account', () => {
-            it('encodes value', () => {
-                const bytes = Amino.marshalAccount(account, false);
-                const data  = bytesToBase64(bytes);
-                expect(data).toBe(accountData);
-            });
-        });
+        // describe('Account', () => {
+        //     it('encodes value', () => {
+        //         const bytes = Amino.marshalAccount(account, false);
+        //         const data  = bytesToBase64(bytes);
+        //         expect(data).toBe(accountData);
+        //     });
+        // });
 
         describe('IAVLValueOp', () => {
             it('encodes value', () => {

@@ -34,15 +34,15 @@ const tx = {
 };
 
 describe('Tx2', () => {
-    describe('decoding', () => {
-        describe('Tx', () => {
-            it('decodes bytes', () => {
-                const bytes = base64ToBytes(txData);
-                const value = Amino.unmarshalTx(bytes, true);
-                expect(value).toMatchObject(tx);
-            });
-        });
-    });
+    // describe('decoding', () => {
+    //     describe('Tx', () => {
+    //         it('decodes bytes', () => {
+    //             const bytes = base64ToBytes(txData);
+    //             const value = Amino.unmarshalTx(bytes, true);
+    //             expect(value).toMatchObject(tx);
+    //         });
+    //     });
+    // });
 
     describe('encoding', () => {
         describe('Tx', () => {
