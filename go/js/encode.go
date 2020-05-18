@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/cosmos/amino-js/go/src"
+	"github.com/pokt-network/amino-js/go/src"
 	"time"
 )
 

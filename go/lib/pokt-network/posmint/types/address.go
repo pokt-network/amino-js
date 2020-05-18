@@ -7,9 +7,7 @@ import (
 	"errors"
 	"fmt"
 
-	//"github.com/pokt-network/posmint/crypto"
-	tmCrypto "github.com/cosmos/amino-js/go/lib/tendermint/tendermint/crypto"
-	//tmCrypto "github.com/tendermint/tendermint/crypto"
+	tmCrypto "github.com/pokt-network/amino-js/go/lib/tendermint/tendermint/crypto"
 	"gopkg.in/yaml.v2"
 )
 
