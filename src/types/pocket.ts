@@ -13,21 +13,6 @@ export interface PosmintEd25519PublicKey {
     
 }
 
-// /** @TODO document */
-// export interface PosmintPubKey extends PosmintKey {
-// }
-
-/**
- * type StdSignDoc struct {
-	AccountNumber uint64            `json:"account_number"`
-	ChainID       string            `json:"chain_id"`
-	Fee           json.RawMessage   `json:"fee"`
-	Memo          string            `json:"memo"`
-	Msgs          []json.RawMessage `json:"msgs"`
-	Sequence      uint64            `json:"sequence"`
-}
- */
-
 export interface PosmintEd25519PublicKey {
     /** Amino registered name, e.g. `"tendermint/PubKeySecp256k1"` */
     type: string;
@@ -36,17 +21,7 @@ export interface PosmintEd25519PublicKey {
 }
 
 export interface PosmintStdSignDoc {
-    
-    // account_number: number,
-    // chain_id: string,
-    // fee: string,
-    // memo: string,
-    // msgs: string[],
-    // sequence: number
 }
-
-// export interface PosmintPubKey extends PosmintKey {
-// }
 
 export interface PosmintStdSignature {
     pub_key: PosmintEd25519PublicKey;
