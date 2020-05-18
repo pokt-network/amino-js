@@ -3,8 +3,8 @@ package auth
 import (
 	"encoding/json"
 
-	sdk "github.com/cosmos/amino-js/go/lib/pokt-network/posmint/types"
-	"github.com/cosmos/amino-js/go/lib/tendermint/tendermint/crypto"
+	sdk "github.com/pokt-network/amino-js/go/lib/pokt-network/posmint/types"
+	"github.com/pokt-network/amino-js/go/lib/tendermint/tendermint/crypto"
 )
 
 var _ sdk.Tx = (*StdTx)(nil)

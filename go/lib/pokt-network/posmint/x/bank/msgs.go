@@ -1,7 +1,7 @@
 package bank
 
 import (
-	sdk "github.com/cosmos/amino-js/go/lib/pokt-network/posmint/types"
+	sdk "github.com/pokt-network/amino-js/go/lib/pokt-network/posmint/types"
 )
 
 var _ sdk.Msg = MsgSend{}

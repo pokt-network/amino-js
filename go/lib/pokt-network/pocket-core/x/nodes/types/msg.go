@@ -1,8 +1,8 @@
 package types
 
 import (
-	"github.com/cosmos/amino-js/go/lib/pokt-network/posmint/crypto"
-	sdk "github.com/cosmos/amino-js/go/lib/pokt-network/posmint/types"
+	"github.com/pokt-network/amino-js/go/lib/pokt-network/posmint/crypto"
+	sdk "github.com/pokt-network/amino-js/go/lib/pokt-network/posmint/types"
 )
 
 var (
