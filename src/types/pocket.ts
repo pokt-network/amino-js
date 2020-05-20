@@ -83,9 +83,9 @@ export interface PosmintCoin {
 }
 
 export interface PosmintStdTx extends PosmintTxValue {
-    msg: PosmintMsg[];
+    msg: PosmintMsg;
     fee: PosmintCoin[];
-    signatures: PosmintStdSignature[];
+    signature: PosmintStdSignature;
     memo: string;
     entropy: string;
 }
